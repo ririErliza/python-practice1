@@ -4,8 +4,32 @@
 
 fruits = {
     'banana' : 'yellow',
-    'apple': 'red,'
+    'apple': 'red'
 }
 
 print(fruits)
 # {'banana': 'yellow', 'apple': 'red,'}
+
+print('oranges' in fruits)
+# False
+print('apple' in fruits)
+# True
+
+print(fruits.keys())
+# dict_keys(['banana', 'apple'])
+
+print(list(fruits.keys()))
+# ['banana', 'apple']
+
+print(fruits.values())
+# dict_values(['yellow', 'red,'])
+
+vals = list(fruits.values())
+print(vals)
+# ['yellow', 'red,']
+
+print(vals.count('red'))
+# 1
+
+print(vals.count('blue'))
+# 0
