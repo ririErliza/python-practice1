@@ -60,7 +60,12 @@ def vol(area,length):
 radius=int(input('enter radius: '))
 length=int(input('enter a length: '))
 
-area_calc=area(radius)
-vol(area_calc,length)
+# area_calc=area(radius)
+# vol(area_calc,length)
+
+vol(area(radius),length) 
+# this also work the same as above
+
+
 
 
