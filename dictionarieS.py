@@ -47,3 +47,23 @@ print(person)
 
 print('_____________________________________')
 
+# adding key n value to empty dict
+
+def fruits_collection(dict):
+    for key, val in dict.items():
+        print(f'{key} : {val}')
+
+fruits1={}
+
+while True:
+    fruit_name = input('enter fruit name: ')
+    fruit_color = input('enter the color: ')
+    fruits1[fruit_name]=fruit_color
+
+    another=input('add another? (y/n)')
+    if another == 'y':
+        continue
+    else:
+        break
+
+fruits_collection(fruits1)
