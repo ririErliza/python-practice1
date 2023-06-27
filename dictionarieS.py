@@ -33,3 +33,17 @@ print(vals.count('red'))
 
 print(vals.count('blue'))
 # 0
+
+fruits['kiwi'] = 'green'
+print(fruits)
+# {'banana': 'yellow', 'apple': 'red', 'kiwi': 'green'} 
+
+print('_____________________________________')
+# creating dictionaries
+
+person = dict(name='Liyl', age = 34, height = '160cm')
+print(person)
+{'name': 'Liyl', 'age': 34, 'height': '160cm'}
+
+print('_____________________________________')
+
