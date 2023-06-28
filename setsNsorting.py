@@ -40,5 +40,50 @@ print(set(nums))
 # with NO DUPLICATE
 
 print(set(names))
+#{'ryu', 'abe', 'Apple', 'shaun', 'Brian'}
+# duplicates eliminated
+# but the order is messed
 
 
+# we have dictionary here
+ninjas = {
+    'rey':'black',
+    'yoshi':'red',
+    'crystal':'red'
+    }
+
+print(set(ninjas.values()))
+# {'black', 'red'}
+
+print('_____________________________________')
+
+# def fruit_count(dict):
+#     fruits=list(dict.values())
+#     for fruit in fruits: 
+#         num = fruits.count(fruit)
+#         print(f'There are {num} {fruit} fruits')
+
+# above code cause duplicate
+# add SET to code below
+# so we can loop though data and avoid duplicate
+
+def fruit_count(dict):
+    fruits=list(dict.values())
+    for fruit in set(fruits): 
+        num = fruits.count(fruit)
+        print(f'There are {num} {fruit} fruits')
+
+fruits={}
+
+while True:
+    fruit_name = input('enter fruit name: ')
+    fruit_color = input('enter the color: ')
+    fruits[fruit_name]=fruit_color
+
+    another=input('add another? (y/n)')
+    if another == 'y':
+        continue
+    else:
+        break
+
+fruit_count(fruits) # we need to pass the dictionary here inside the func
