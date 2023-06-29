@@ -151,3 +151,33 @@ print(pingpong.commons())
 # print(Balls_1.prod())
 # this will give an error because prod() is instance method
 
+
+
+# @staticmethod
+class Balls_2:
+
+    shape = 'round' # this is class level attribute
+
+    def __init__(self, name, price, manufacture): # this is instance attributes
+        self.name = name
+        self.price = price
+        self.manufacture = manufacture
+    
+    def prod(self): # this is instance method
+        return f'This ball, {self.name}, is produced by {self.manufacture}'
+
+    @classmethod
+    def commons(cls):
+        return f'All balls are {cls.shape}'
+    
+    @staticmethod
+    def heavy(weight='100gram to 1kg'):
+        return f'The balls are heavy, ranging from {weight}'
+    
+
+print(Balls_2.heavy())
+# The balls are heavy, ranging from 100gram to 1kg
+
+pingpong = Balls_2('Pingpong', 5000, 'Flutter')
+print(pingpong.heavy('100 gram'))
+# The balls are heavy, ranging from 100 gram
