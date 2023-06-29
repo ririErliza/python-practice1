@@ -71,12 +71,12 @@ print(noBrand.os())
 # now we want to make the class dynamic, can be used by other variables
 
 class flour:
-    def __init__(self, name, price, manufacture):
+    def __init__(self, name, price, manufacture): # this is attributes
         self.name = name
         self.price = price
         self.manufacture = manufacture
     
-    def prod(self):
+    def prod(self): # this is method
         return f'This flour, {self.name}, is produced by {self.manufacture}'
 
 
