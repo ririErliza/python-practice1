@@ -67,3 +67,30 @@ print(noBrand.os())
 # Acer has windows as it's OS
 
 
+#-------------------------------------------
+# now we want to make the class dynamic, can be used by other variables
+
+class flour:
+    def __init__(self, name, price, manufacture):
+        self.name = name
+        self.price = price
+        self.manufacture = manufacture
+    
+    def prod(self):
+        return f'This flour, {self.name}, is produced by {self.manufacture}'
+
+
+terigu = flour('Terigu', 15000, 'Bogasari')
+print(f'Name: {terigu.name}')
+print(f'Price: {terigu.price}')
+print(f'Manufacture: {terigu.manufacture}')
+print(terigu.prod())
+# This flour, Terigu, is produced by Bogasari
+
+tepBeras = flour('Tepung beras', 18000, 'Rose Brand')
+print(f'Name: {tepBeras.name}')
+print(f'Price: {tepBeras.price}')
+print(f'Manufacture: {tepBeras.manufacture}')
+print(tepBeras.prod())
+# This flour, Tepung beras, is produced by Rose Brand
+
