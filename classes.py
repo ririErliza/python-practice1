@@ -94,3 +94,26 @@ print(f'Manufacture: {tepBeras.manufacture}')
 print(tepBeras.prod())
 # This flour, Tepung beras, is produced by Rose Brand
 
+
+
+#--------------Methods  &  Attributes-------------------------
+# class level attributes
+
+class Balls:
+
+    shape = 'round' # this is class level attribute
+
+    def __init__(self, name, price, manufacture): # this is instance attributes
+        self.name = name
+        self.price = price
+        self.manufacture = manufacture
+    
+    def prod(self): # this is instance method
+        return f'This ball, {self.name}, is produced by {self.manufacture}'
+
+
+print(Balls.shape) # round
+
+pingpong = Balls('Pingpong', 5000, 'Flutter')
+print(pingpong.shape) # round
+
