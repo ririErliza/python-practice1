@@ -117,3 +117,37 @@ print(Balls.shape) # round
 pingpong = Balls('Pingpong', 5000, 'Flutter')
 print(pingpong.shape) # round
 
+# print(Balls.name)
+# this throws an error because the class balls dont have
+# name attribute at class level
+# name attribute is instance attribute
+
+# @classmethod
+class Balls_1:
+
+    shape = 'round' # this is class level attribute
+
+    def __init__(self, name, price, manufacture): # this is instance attributes
+        self.name = name
+        self.price = price
+        self.manufacture = manufacture
+    
+    def prod(self): # this is instance method
+        return f'This ball, {self.name}, is produced by {self.manufacture}'
+
+    @classmethod
+    def commons(cls):
+        return f'All balls are {cls.shape}'
+    
+
+print(Balls_1.commons())
+# All balls are round
+
+pingpong = Balls_1('Pingpong', 5000, 'Flutter')
+print(pingpong.commons())
+# All balls are round
+
+
+# print(Balls_1.prod())
+# this will give an error because prod() is instance method
+
